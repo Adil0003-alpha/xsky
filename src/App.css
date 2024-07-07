@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+/* HOME CSS */
+.main {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* NAVBAR CSS */
+.nav {
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+.left h1 {
+  text-transform: capitalize;
+  font-size: 3rem;
+  font-family: "Lobster", sans-serif;
+  background: -webkit-linear-gradient(#eee, #ae0ad7, #230f37);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 2px #d4d2d2);
+  cursor: pointer;
+}
+.left h1:hover {
+  background: -webkit-linear-gradient(#eee, #270550, #f72307);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 2px #d4d2d2);
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search input {
+  width: 25rem;
+  height: 26px;
+  outline: none;
+  border: none;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36%;
+}
+.right div {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+.right div:hover {
+  color: #ffee00;
+  height: 10px;
+  border-bottom: 3px solid rgb(19, 19, 43);
+  border-radius: 20px;
+  font-weight: 800;
+}
+
+/* POPULAR SLIDER CSS */
+.slider-container {
+  height: 60vh;
+  width: 100%;
+  margin: 0 auto;
+  background: url(https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg);
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 6rem;
+  perspective: 800px;
+}
+.slider img {
+  width: 300px;
+  height: 20rem;
+  border-radius: 5%;
+  transition: transform 0.3s ease;
+  border: 2px solid rgb(33, 33, 56);
+}
+.slider img:hover {
+  transform: translateZ(100px);
+}
+/* TRENDING SLIDER CSS */
+.min-slider-container {
+  height: 30vh;
+  width: 99%;
+  margin: 20px auto;
+  overflow-x: hidden;
+}
+.min-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 4rem;
+  perspective: 800px;
+}
+.min-slider img {
+  width: 160px;
+  height: 10rem;
+  border-radius: 5%;
+  transition: transform 0.3s ease;
+  border: 2px solid rgb(33, 33, 56);
+}
+.min-slider img:hover {
+  transform: translateZ(100px);
+}
+/* RecipiId page */
+.mealDetail {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+.flex {
+  display: flex;
+}
+.img {
+  margin-bottom: 20px;
+  perspective: 800px;
+}
+
+.img img {
+  width: 50%;
+  border-radius: 5%;
+  border: 2px solid rgb(34, 34, 64);
+  transition: transform 0.3s ease;
+}
+.img img:hover {
+  transform: translateZ(150px);
+  border: 2px solid purple;
+}
+.content {
+  width: 60%;
+}
+.content .btn {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: yellow;
+  border-radius: 10%;
+  margin: 2rem;
+  border: 2px solid rgb(34, 34, 64);
+}
+.link {
+  text-decoration: none;
+}
+.ingredient {
+  display: inline-flex;
+  float: left;
+  gap: 1rem;
+}
+.ingredient p {
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+#instruction {
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-family: monospace;
+}
+/* Country Category Css */
+.country-category {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+.country-category-content {
+  text-align: center;
+}
+.cont-cate-img {
+  perspective: 800px;
+}
+.country-category-content img {
+  width: 15rem;
+  border-radius: 5%;
+  border: 2px solid rgb(34, 34, 64);
+  transition: transform 0.3s ease;
+}
+.country-category-content img:hover {
+  transform: translateZ(100px);
+  border: 2px solid purple;
+}
