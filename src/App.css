@@ -5,6 +5,11 @@
   padding: 0;
   overflow-x: hidden;
 }
+.main img {
+  position: absolute;
+  z-index: 999 !important;
+  background: red;
+}
 /* NAVBAR CSS */
 .nav {
   background-color: blue;
@@ -79,7 +84,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem 6rem;
+  margin: 12rem 6rem;
   perspective: 800px;
 }
 .slider img {
@@ -103,6 +108,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 99%;
+  height: 25vh;
   margin: 1rem 4rem;
   perspective: 800px;
 }
@@ -131,7 +138,8 @@
 }
 
 .img img {
-  width: 50%;
+  margin-top: 30px;
+  width: 70%;
   border-radius: 5%;
   border: 2px solid rgb(34, 34, 64);
   transition: transform 0.3s ease;
@@ -140,16 +148,30 @@
   transform: translateZ(150px);
   border: 2px solid purple;
 }
+.detailsData {
+  width: 70%;
+  height: 50vh;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
 .content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
   width: 60%;
 }
 .content .btn {
-  padding: 1rem;
+  position: relative;
+  top: 18rem;
+  left: 30rem;
+  width: 100px;
+  height: 40px;
+  padding: 3px;
   font-size: 1rem;
   font-weight: bold;
   background-color: yellow;
   border-radius: 10%;
-  margin: 2rem;
   border: 2px solid rgb(34, 34, 64);
 }
 .link {
@@ -157,7 +179,6 @@
 }
 .ingredient {
   display: inline-flex;
-  float: left;
   gap: 1rem;
 }
 .ingredient p {
@@ -166,7 +187,13 @@
   font-weight: 600;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-#instruction {
+
+.inst p {
+  position: relative;
+  right: 10rem;
+  width: 800px;
+  height: 80%;
+  padding: 10px;
   text-align: justify;
   font-size: 1rem;
   font-weight: 400;
@@ -197,4 +224,187 @@
 .country-category-content img:hover {
   transform: translateZ(100px);
   border: 2px solid purple;
+}
+@media screen and (max-width: 1200px) {
+  .nav {
+    display: flex;
+  }
+
+  .left {
+    width: 20%;
+  }
+
+  .right {
+    width: 15%;
+    margin-right: 10rem;
+  }
+  .search input {
+    width: 60%;
+    height: 26px;
+    margin-right: 20rem;
+  }
+  .slider {
+    margin: 12rem 6rem;
+  }
+  .slider img {
+    width: 250px;
+    height: 15rem;
+  }
+  .slider-container {
+    height: 53vh;
+  }
+  .min-slider-container {
+    height: 30vh;
+  }
+  .min-slider {
+    height: 25vh;
+    margin: 1rem 4rem;
+    perspective: 600px;
+  }
+  .min-slider img {
+    width: 180px;
+    height: 10rem;
+  }
+  .min-slider img:hover {
+    transform: translateZ(50px);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .min-slider-container {
+    height: 30vh;
+  }
+  .min-slider img {
+    width: 150px;
+    height: 9rem;
+  }
+  .mealDetail {
+    width: 95%;
+    height: 50vh;
+  }
+  .img {
+    margin-bottom: 10px;
+    perspective: 600px;
+  }
+  .img img {
+    width: 50%;
+    margin-left: -5%;
+  }
+  .img img:hover {
+    transform: translateZ(50px);
+    border: 2px solid purple;
+  }
+  .detailsData {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .content {
+    position: relative;
+    bottom: -13rem;
+    display: inline-flex;
+    width: 60%;
+    height: 10vh;
+    justify-content: space-between;
+  }
+  .content .btn {
+    position: relative;
+    top: 5rem;
+    left: 13rem;
+    width: 100px;
+    height: 30px;
+    padding: 3px;
+  }
+  .ingredient {
+    position: relative;
+    padding-right: 10px;
+    bottom: 15rem;
+    display: inline-flex;
+    justify-content: space-between;
+  }
+  .inst p {
+    position: relative;
+    right: 15rem;
+    bottom: 15rem;
+    width: 500px;
+    height: 80%;
+    padding: 10px;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2rem;
+    font-family: monospace;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    display: flex;
+  }
+
+  .left {
+    width: 20%;
+  }
+
+  .right {
+    display: none;
+  }
+  .search input {
+    width: 60%;
+    height: 26px;
+    margin-right: 20rem;
+  }
+  .slider-container {
+    height: 50vh;
+  }
+  .slider {
+    margin: 12rem 6rem;
+  }
+  .slider img {
+    width: 200px;
+    height: 12rem;
+  }
+  .min-slider-container {
+    height: 50vh;
+  }
+  .min-slider {
+    height: 25vh;
+    margin: 1rem 4rem;
+    perspective: 600px;
+  }
+  .min-slider img {
+    width: 100px;
+    height: 6rem;
+  }
+  .min-slider img:hover {
+    transform: translateZ(50px);
+  }
+}
+@media screen and (max-width: 700px) {
+  .left {
+    width: 30%;
+  }
+  .search input {
+    margin-right: 8rem;
+  }
+  .slider-container {
+    height: 40vh;
+  }
+  .slider {
+    margin: 10rem 3rem;
+    perspective: 600px;
+  }
+  .slider img {
+    width: 130px;
+    height: 8rem;
+  }
+  .slider img:hover {
+    transform: translateZ(50px);
+  }
+  .min-slider-container {
+    height: 30vh;
+  }
+  .min-slider img {
+    width: 80px;
+    height: 5rem;
+  }
 }
