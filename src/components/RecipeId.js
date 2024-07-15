@@ -36,12 +36,17 @@ const RecipeId = () => {
           </div>
           <div className="detailsData">
             <div className="content">
-              <button className="btn" onClick={() => setActive("ingredient")}>
-                Ingredient
-              </button>
-              <button className="btn" onClick={() => setActive("instruction")}>
-                Instruction
-              </button>
+              <div className="btns">
+                <button className="btn" onClick={() => setActive("ingredient")}>
+                  Ingredient
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => setActive("instruction")}
+                >
+                  Instruction
+                </button>
+              </div>
 
               {active === "ingredient" ? (
                 <div className="ingredient">
@@ -123,8 +128,9 @@ const RecipeId = () => {
           </div>
         </div>
       </div>
-
-      <TrendSlider />
+      <div className="trendCard">
+        <TrendSlider />
+      </div>
     </>
   );
 };
